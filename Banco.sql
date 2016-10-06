@@ -1,13 +1,13 @@
 ﻿create table estados(
-EstadoId SERIAL NOT NULL,
+EstadoId integer NOT NULL,
 Nome varchar(50) NOT NULL DEFAULT '',
 Sigla char(2) NOT NULL DEFAULT '',
 CONSTRAINT PK_Estados PRIMARY KEY(EstadoID)
 );
 
 create table cidades(
-CidadeId SERIAL NOT NULL,
-EstadoId SERIAL NOT NULL,
+CidadeId integer NOT NULL,
+EstadoId integer NOT NULL,
 Nome varchar(50) NOT NULL DEFAULT '',
 CONSTRAINT PK_Cidades PRIMARY KEY(CidadeID),
 CONSTRAINT FK_Estados_Cidades FOREIGN KEY (EstadoId)
@@ -16,8 +16,8 @@ REFERENCES Estados (EstadoId)
 
 create table usuario(
 IdUsuario SERIAL NOT NULL,
-CidadeId SERIAL NOT NULL,
-EstadoId SERIAL NOT NULL,
+CidadeId integer NOT NULL,
+EstadoId integer NOT NULL,
 Nome varchar(100) NOT NULL DEFAULT '',
 Cpf integer NOT NULL,
 Telefone integer NOT NULL,
@@ -35,7 +35,7 @@ REFERENCES Cidades (CidadeId)
 );
 
 create table veiculos(
-IdVeiculo SERIAL NOT NULL,
+IdVeiculo integer NOT NULL,
 TipoVeiculo varchar(50) NOT NULL DEFAULT '',
 Placa varchar(50) NOT NULL DEFAULT '',
 TipoCombustivel varchar(50) NOT NULL DEFAULT '',
