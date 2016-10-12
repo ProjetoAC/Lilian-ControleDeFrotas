@@ -19,10 +19,8 @@ IdUsuario SERIAL NOT NULL,
 CidadeId integer NOT NULL,
 EstadoId integer NOT NULL,
 Nome varchar(100) NOT NULL DEFAULT '',
-Cpf integer NOT NULL,
-Telefone integer NOT NULL,
-Estado varchar(100) NOT NULL DEFAULT '',
-Cidade varchar(100) NOT NULL DEFAULT '',
+Cpf varchar(15) NOT NULL DEFAULT '',
+Telefone varchar(20) NOT NULL DEFAULT '',
 Endereco varchar(100) NOT NULL DEFAULT '',
 Bairro varchar(100) NOT NULL DEFAULT '',
 NumeroCarteira integer NOT NULL,
@@ -35,10 +33,13 @@ REFERENCES Cidades (CidadeId)
 );
 
 create table veiculos(
-IdVeiculo integer NOT NULL,
+IdVeiculo SERIAL NOT NULL,
 TipoVeiculo varchar(50) NOT NULL DEFAULT '',
 Placa varchar(50) NOT NULL DEFAULT '',
 TipoCombustivel varchar(50) NOT NULL DEFAULT '',
 Carga varchar(100) NOT NULL DEFAULT '',
 CONSTRAINT PK_Veiculos PRIMARY KEY (IdVeiculo)
 );
+
+SELECT * FROM usuario
+
