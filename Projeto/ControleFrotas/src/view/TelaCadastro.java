@@ -30,11 +30,11 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
         initComponents();
         setModelo();
         limpaCampos();
-        txtIdUsuario.setEditable(false);
+        
         usuarioController = new UsuarioController();  
         listaUsuario();
         this.setSize(595,680);
-        this.setLocation(300,320);
+        this.setLocation(80,320);
         
     }
 
@@ -57,8 +57,6 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCadastro = new javax.swing.JTable();
-        jLabel10 = new javax.swing.JLabel();
-        txtIdUsuario = new javax.swing.JTextField();
         btnExcluir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -73,17 +71,13 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
         txtEndereco = new javax.swing.JTextField();
         txtEstado = new javax.swing.JTextField();
         txtCidade = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
 
         setClosable(true);
         setTitle("Cadastro de Usuarios");
         setVisible(false);
-        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel1.setText("Nome:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 110, 50, 16);
 
         txtBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,24 +89,18 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 txtBairroKeyTyped(evt);
             }
         });
-        getContentPane().add(txtBairro);
-        txtBairro.setBounds(160, 340, 260, 30);
 
         txtNumeroCarteira.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNumeroCarteiraKeyTyped(evt);
             }
         });
-        getContentPane().add(txtNumeroCarteira);
-        txtNumeroCarteira.setBounds(160, 380, 260, 30);
 
         txtTipoCarteira.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTipoCarteiraKeyTyped(evt);
             }
         });
-        getContentPane().add(txtTipoCarteira);
-        txtTipoCarteira.setBounds(160, 420, 260, 30);
 
         btnCadastrar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnCadastrar.setText("Cadastrar");
@@ -121,8 +109,6 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCadastrar);
-        btnCadastrar.setBounds(300, 460, 97, 30);
 
         btnLimpar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnLimpar.setText("Limpar");
@@ -131,18 +117,12 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLimpar);
-        btnLimpar.setBounds(180, 460, 90, 30);
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel8.setText("Cidade:");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 260, 60, 30);
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel9.setText("Estado:");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(30, 230, 49, 16);
 
         tblCadastro.setFont(new java.awt.Font("Rockwell", 2, 12)); // NOI18N
         tblCadastro.setModel(new javax.swing.table.DefaultTableModel(
@@ -163,24 +143,6 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tblCadastro);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 510, 560, 90);
-
-        jLabel10.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel10.setText("IdUsuário:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(30, 70, 80, 16);
-
-        txtIdUsuario.setForeground(new java.awt.Color(0, 0, 204));
-        txtIdUsuario.setCaretColor(new java.awt.Color(0, 0, 204));
-        txtIdUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtIdUsuarioKeyTyped(evt);
-            }
-        });
-        getContentPane().add(txtIdUsuario);
-        txtIdUsuario.setBounds(160, 60, 260, 30);
-
         btnExcluir.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -188,44 +150,28 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 btnExcluirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExcluir);
-        btnExcluir.setBounds(490, 620, 80, 30);
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel2.setText("CPF:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 150, 50, 16);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Light", 3, 24)); // NOI18N
         jLabel11.setText("     Cadastro");
         jLabel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 24))); // NOI18N
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(180, 10, 180, 37);
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel3.setText("Telefone:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 190, 70, 16);
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel4.setText("Endereço:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 310, 70, 16);
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel5.setText("Bairro:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 350, 70, 16);
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel6.setText("Número Carteira:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 380, 120, 22);
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel7.setText("TipoCarteira:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 420, 87, 20);
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,40 +183,30 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 txtNomeKeyTyped(evt);
             }
         });
-        getContentPane().add(txtNome);
-        txtNome.setBounds(160, 100, 260, 30);
 
         txtCpf.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCpfKeyTyped(evt);
             }
         });
-        getContentPane().add(txtCpf);
-        txtCpf.setBounds(160, 140, 260, 30);
 
         txtTelefone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTelefoneKeyTyped(evt);
             }
         });
-        getContentPane().add(txtTelefone);
-        txtTelefone.setBounds(160, 180, 260, 30);
 
         txtEndereco.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtEnderecoKeyTyped(evt);
             }
         });
-        getContentPane().add(txtEndereco);
-        txtEndereco.setBounds(160, 300, 260, 30);
 
         txtEstado.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtEstadoKeyTyped(evt);
             }
         });
-        getContentPane().add(txtEstado);
-        txtEstado.setBounds(160, 220, 260, 30);
 
         txtCidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,12 +218,137 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 txtCidadeKeyTyped(evt);
             }
         });
-        getContentPane().add(txtCidade);
-        txtCidade.setBounds(160, 260, 260, 30);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Sunset-road-truck_1920x1080.jpg"))); // NOI18N
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(0, 0, 600, 730);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel9)
+                .addGap(81, 81, 81)
+                .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(txtNumeroCarteira, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel7)
+                .addGap(43, 43, 43)
+                .addComponent(txtTipoCarteira, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnCadastrar))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(490, 490, 490)
+                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel11)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1))
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel2))
+                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel3))
+                    .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel9))
+                    .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel4))
+                    .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel5))
+                    .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNumeroCarteira, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTipoCarteira, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -325,18 +386,6 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
     private void tblCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCadastroMouseClicked
         carregaUsuario();
     }//GEN-LAST:event_tblCadastroMouseClicked
-
-    private void txtIdUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdUsuarioKeyTyped
-        String validar = "123456790";
-
-        if (!validar.contains(evt.getKeyChar() + "")) {
-
-            evt.consume();
-        }
-        if (evt.getKeyChar() == 10) {
-            txtIdUsuario.grabFocus();
-        }
-    }//GEN-LAST:event_txtIdUsuarioKeyTyped
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         deleteUsuario();
@@ -394,9 +443,7 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -412,7 +459,6 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtCpf;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtEstado;
-    private javax.swing.JTextField txtIdUsuario;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNumeroCarteira;
     private javax.swing.JTextField txtTelefone;
@@ -534,7 +580,7 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
     private void limpaCampos() {
         usuario = null;
 
-        txtIdUsuario.setText(""); 
+        
         txtNome.setText("");
         txtCpf.setText("");
         txtTelefone.setText("");
@@ -566,7 +612,7 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
             Usuario us = listaUsuario.get(x);
             if (id == us.getIdUsuario()) {
 
-                txtIdUsuario.setText(us.getIdUsuario() + "");    
+                
                 txtNome.setText(us.getNome());
                 txtCpf.setText(us.getCpf() + "");
                 txtTelefone.setText(us.getTelefone() + "");

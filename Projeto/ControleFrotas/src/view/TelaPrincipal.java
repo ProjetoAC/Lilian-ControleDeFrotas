@@ -39,7 +39,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu1.setForeground(new java.awt.Color(0, 51, 204));
-        jMenu1.setText("Arquivo");
+        jMenu1.setText("Configurações");
         jMenu1.setFont(new java.awt.Font("Arial Unicode MS", 1, 12)); // NOI18N
 
         mniSair.setFont(new java.awt.Font("Gulim", 1, 12)); // NOI18N

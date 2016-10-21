@@ -23,7 +23,7 @@ public class Conexao {
             conexao = DriverManager.getConnection(
                     "jdbc:postgresql://127.0.0.1:5432/controle_frotas", 
                     "postgres", 
-                    "postgres");
+                    "123456");
            }catch(SQLException ex){
                System.out.println("Erro Conexo Banco"+ex);
            }

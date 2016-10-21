@@ -28,11 +28,11 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
         initComponents();
         setModelo();
         limpaCampos();
-        txtIdVeiculo.setEditable(false);
+        
         veiculoController = new VeiculoController();
         listaVeiculo();
         this.setSize(530,530);
-        this.setLocation(300,340);
+        this.setLocation(80,320);
     }
 
     /**
@@ -46,8 +46,6 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
 
         btnCadastrar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        txtIdVeiculo = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblCadastrosVeiculo = new javax.swing.JTable();
         btnExcluir = new javax.swing.JButton();
@@ -60,11 +58,9 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
         txtPlaca = new javax.swing.JTextField();
         txtTipoCombustivel = new javax.swing.JTextField();
         txtCarga = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
 
         setClosable(true);
         setTitle("Cadastro de Veículo");
-        getContentPane().setLayout(null);
 
         btnCadastrar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnCadastrar.setText("Cadastrar");
@@ -73,8 +69,6 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCadastrar);
-        btnCadastrar.setBounds(320, 300, 100, 30);
 
         btnLimpar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnLimpar.setText("Limpar");
@@ -83,26 +77,6 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLimpar);
-        btnLimpar.setBounds(220, 300, 80, 30);
-
-        jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel5.setText("VeiculoId:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 90, 70, 30);
-
-        txtIdVeiculo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdVeiculoActionPerformed(evt);
-            }
-        });
-        txtIdVeiculo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtIdVeiculoKeyTyped(evt);
-            }
-        });
-        getContentPane().add(txtIdVeiculo);
-        txtIdVeiculo.setBounds(200, 90, 240, 30);
 
         tblCadastrosVeiculo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -122,9 +96,6 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
         });
         jScrollPane2.setViewportView(tblCadastrosVeiculo);
 
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(12, 349, 490, 95);
-
         btnExcluir.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -132,42 +103,28 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
                 btnExcluirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExcluir);
-        btnExcluir.setBounds(420, 460, 80, 30);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jLabel6.setText("Cadastro do Veículo");
         jLabel6.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(100, 20, 243, 37);
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel1.setText("Tipo Veículo:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(50, 130, 85, 30);
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel2.setText("Placa:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 170, 60, 30);
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel3.setText("Tipo do Combustível:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 210, 138, 30);
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel4.setText("Carga:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 250, 50, 30);
 
         txtTipoVeiculo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTipoVeiculoKeyTyped(evt);
             }
         });
-        getContentPane().add(txtTipoVeiculo);
-        txtTipoVeiculo.setBounds(200, 130, 240, 30);
 
         txtPlaca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,28 +136,84 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
                 txtPlacaKeyTyped(evt);
             }
         });
-        getContentPane().add(txtPlaca);
-        txtPlaca.setBounds(200, 170, 240, 30);
 
         txtTipoCombustivel.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTipoCombustivelKeyTyped(evt);
             }
         });
-        getContentPane().add(txtTipoCombustivel);
-        txtTipoCombustivel.setBounds(200, 210, 240, 30);
 
         txtCarga.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCargaKeyTyped(evt);
             }
         });
-        getContentPane().add(txtCarga);
-        txtCarga.setBounds(200, 250, 240, 30);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Sunset-road-truck_1920x1080.jpg"))); // NOI18N
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(0, 0, 520, 500);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(420, 420, 420)
+                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTipoVeiculo, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(txtPlaca)
+                            .addComponent(txtTipoCombustivel)
+                            .addComponent(txtCarga))))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel6)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTipoVeiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTipoCombustivel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -249,22 +262,6 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPlacaActionPerformed
 
-    private void txtIdVeiculoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdVeiculoKeyTyped
-        String validar = "123456790";
-
-        if (!validar.contains(evt.getKeyChar() + "")) {
-
-            evt.consume();
-        }
-        if (evt.getKeyChar() == 10) {
-            txtTipoVeiculo.grabFocus();
-        }
-    }//GEN-LAST:event_txtIdVeiculoKeyTyped
-
-    private void txtIdVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdVeiculoActionPerformed
-
-    }//GEN-LAST:event_txtIdVeiculoActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
@@ -274,13 +271,10 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblCadastrosVeiculo;
     private javax.swing.JTextField txtCarga;
-    private javax.swing.JTextField txtIdVeiculo;
     private javax.swing.JTextField txtPlaca;
     private javax.swing.JTextField txtTipoCombustivel;
     private javax.swing.JTextField txtTipoVeiculo;
@@ -354,8 +348,8 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
         ArrayList<Veiculo> lista;
         lista = veiculoController.getVeiculo();
         for (int x = 0; x < lista.size(); x++) {
-            Veiculo us = lista.get(x);
-            insereTabela(us);
+            Veiculo ve = lista.get(x);
+            insereTabela(ve);
         }
         listaVeiculo = lista;
     }
@@ -363,7 +357,7 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
     private void limpaCampos() {
         veiculo = null;
 
-        txtIdVeiculo.setText("");
+        
         txtTipoVeiculo.setText("");
         txtPlaca.setText("");
         txtTipoCombustivel.setText("");
@@ -386,15 +380,15 @@ public class TelaVeiculo extends javax.swing.JInternalFrame {
     private void carregaVeiculo() {
         int id = pegaIdSelecionado();
         for (int x = 0; x < listaVeiculo.size(); x++) {
-            Veiculo us = listaVeiculo.get(x);
-            if (id == us.getIdVeiculo()) {
+            Veiculo ve = listaVeiculo.get(x);
+            if (id == ve.getIdVeiculo()) {
 
-                txtIdVeiculo.setText(us.getIdVeiculo() + "");
-                txtTipoVeiculo.setText(us.getTipoVeiculo());
-                txtPlaca.setText(us.getPlaca() + "");
-                txtTipoCombustivel.setText(us.getTipoCombustivel() + "");
-                txtCarga.setText(us.getCarga());
-                veiculo = us;
+                
+                txtTipoVeiculo.setText(ve.getTipoVeiculo());
+                txtPlaca.setText(ve.getPlaca() + "");
+                txtTipoCombustivel.setText(ve.getTipoCombustivel() + "");
+                txtCarga.setText(ve.getCarga());
+                veiculo = ve;
                 break;
             }
         }
